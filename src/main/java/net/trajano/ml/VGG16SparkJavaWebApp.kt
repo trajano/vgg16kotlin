@@ -1,6 +1,7 @@
 package net.trajano.ml
 
 
+import dagger.Component
 import org.datavec.image.loader.NativeImageLoader
 import org.deeplearning4j.nn.graph.ComputationGraph
 import org.deeplearning4j.nn.modelimport.keras.trainedmodels.TrainedModels
@@ -8,6 +9,7 @@ import org.deeplearning4j.util.ModelSerializer
 import org.nd4j.linalg.api.ndarray.INDArray
 import org.nd4j.linalg.dataset.api.preprocessor.DataNormalization
 import org.nd4j.linalg.dataset.api.preprocessor.VGG16ImagePreProcessor
+import org.scalatest.tags.Network
 
 import javax.servlet.MultipartConfigElement
 import java.io.File
@@ -17,12 +19,21 @@ import java.nio.file.Path
 import java.nio.file.StandardCopyOption
 
 import spark.Spark.*
+import javax.inject.Inject
+import javax.inject.Singleton
 
 //import org.nd4j.linalg.dataset.api.preprocessor.
 
 /**
  * Created by tomhanlon on 1/25/17.
  */
+
+@Singleton
+@Component(modules = arrayOf(VggAppModule::class))
+interface App {
+    fun fileProvider() : FileProvider
+    //fun networkProvider() : NetworkProvider
+}
 
 fun main(args: Array<String>) {
 
@@ -37,7 +48,12 @@ fun main(args: Array<String>) {
     // Load Neural Network from serialized format
     //File savedNetwork = new ClassPathResource("vgg16.zip").getFile();
 
-    val savedNetwork = File("vgg16.zip")
+    val app = DaggerApp.create()
+
+    val savedNetwork = app.fileProvider().get()
+    println(savedNetwork)
+    //val vgg16 = app.networkProvider().get()
+    //println(vgg16)
     val vgg16 = ModelSerializer.restoreComputationGraph(savedNetwork)
 
 
