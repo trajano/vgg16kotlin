@@ -19,6 +19,7 @@ addons:
   - github.com
   - site.trajano.net:6022
   sonarqube:
+    organization: trajano
     token:
       secure: giNEWYUiWoDdyZmF5XCG5s+U3RdsCFnpl9crFQi3CiM5FZg2eY2CME59kNUhKujOlYV2wDaLy+7ZzykaU0FTguQvb7aFsil/CgusvVP48lkFw+fJAxnw3Xb3gteLxJSNw4c0Gv7id9/WqPzcWUCL3X82/Im8Aao4/x3kG0K2aiOzL1UyFFcd+PQiK3fTBieS1UZsS0jiekTP390bHKbFEzZqu3jrw4hkf0+laxV7LC/9gPKtmlZSuosYmhvjX0xIEuWXcToWij0eJ4DTDVG64xMB1AXCED2K3SZmNCM4nn/gVtdXC7qjJuyJPBu8Q4NkE4WFk8IONMV92jeP3kwDW9qPdnfhMOHeZHQsQ9NhE1x/CadnIeD9yIchu/4kvLLzttHynU6V/X+xy4frRQlsI3PpAUkKx8gBoWKk/hds5OEawFf211YnvOYIHKHP5+Kq+nu+p0//xgnnmom22x8yGjKPaQ+BoBKMYaD+Y6Z5WHvfuIYa9U6lG5/JbUaOQAOKqy3sPrv7B3/7jmo0pUnl9+yNI9MxRrowE8R+O+wHQm+FslIw+sAk62ipEp2EowGG0sogiJjUgjJRYweElE6Ai/0TKxevf8rpwTIE0qZBi781dWEotkPTfkRpz8IpcYT3aseD4nDA5gEUI2Tu0qvQls7H9iZYlmDoNRmOwnVanYc=
 env:
