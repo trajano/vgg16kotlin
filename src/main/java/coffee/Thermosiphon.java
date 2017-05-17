@@ -2,7 +2,7 @@ package coffee;
 
 import javax.inject.Inject;
 
-class Thermosiphon implements Pump {
+public class Thermosiphon implements Pump {
     private final Heater heater;
 
     @Inject

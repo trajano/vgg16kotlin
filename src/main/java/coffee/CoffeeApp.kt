@@ -4,7 +4,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @Singleton
-@Component(modules = arrayOf(DripCoffeeModule::class))
+@Component(modules = arrayOf(DripCoffeeModule::class, PumpModule::class))
 interface Coffee {
     fun maker(): CoffeeMaker
 }

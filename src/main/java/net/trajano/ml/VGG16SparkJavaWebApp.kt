@@ -32,7 +32,7 @@ import javax.inject.Singleton
 @Component(modules = arrayOf(VggAppModule::class))
 interface App {
     fun fileProvider() : FileProvider
-    //fun networkProvider() : NetworkProvider
+    fun networkProvider() : NetworkProvider
 }
 
 fun main(args: Array<String>) {
@@ -50,12 +50,8 @@ fun main(args: Array<String>) {
 
     val app = DaggerApp.create()
 
-    val savedNetwork = app.fileProvider().get()
-    println(savedNetwork)
-    //val vgg16 = app.networkProvider().get()
-    //println(vgg16)
-    val vgg16 = ModelSerializer.restoreComputationGraph(savedNetwork)
-
+    val vgg16 = app.networkProvider().get()
+    println(vgg16)
 
     // make upload directory to store loaded images
     val uploadDir = File("upload")

@@ -37,6 +37,16 @@ class VggAppModule {
         return DefaultFileProvider()
     }
 
+    @Provides
+    fun provideNetworkProvider(p: VggNetworkProvider): NetworkProvider {
+        return p
+    }
+
+//    @Provides
+//    fun provideFileProvider(p: DefaultFileProvider): FileProvider {
+//        return p
+//    }
+
 //    @Provides
 //    fun provideNetworkProvider(): NetworkProvider {
 //        return VggNetworkProvider()
