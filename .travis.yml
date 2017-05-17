@@ -19,12 +19,7 @@ addons:
   - site.trajano.net:6022
   sonarqube:
     token:
-      secure: YnJoL7AhM3OJeW8mGfyd5tUjlVwHRFFoV5LW8L6y/FaMZJ4P22yCMO3lu37B9U3n33emMxB2U3T1GUdBrF3ldyHrrSjOmdIGd6cq+ZvzB+cC4LTyy8cvhKmkaULiQf1Cqvwlrzc8jJ6L6jEduT6DW9AsodtMyebVePOR2rw2sSI=
+      secure: giNEWYUiWoDdyZmF5XCG5s+U3RdsCFnpl9crFQi3CiM5FZg2eY2CME59kNUhKujOlYV2wDaLy+7ZzykaU0FTguQvb7aFsil/CgusvVP48lkFw+fJAxnw3Xb3gteLxJSNw4c0Gv7id9/WqPzcWUCL3X82/Im8Aao4/x3kG0K2aiOzL1UyFFcd+PQiK3fTBieS1UZsS0jiekTP390bHKbFEzZqu3jrw4hkf0+laxV7LC/9gPKtmlZSuosYmhvjX0xIEuWXcToWij0eJ4DTDVG64xMB1AXCED2K3SZmNCM4nn/gVtdXC7qjJuyJPBu8Q4NkE4WFk8IONMV92jeP3kwDW9qPdnfhMOHeZHQsQ9NhE1x/CadnIeD9yIchu/4kvLLzttHynU6V/X+xy4frRQlsI3PpAUkKx8gBoWKk/hds5OEawFf211YnvOYIHKHP5+Kq+nu+p0//xgnnmom22x8yGjKPaQ+BoBKMYaD+Y6Z5WHvfuIYa9U6lG5/JbUaOQAOKqy3sPrv7B3/7jmo0pUnl9+yNI9MxRrowE8R+O+wHQm+FslIw+sAk62ipEp2EowGG0sogiJjUgjJRYweElE6Ai/0TKxevf8rpwTIE0qZBi781dWEotkPTfkRpz8IpcYT3aseD4nDA5gEUI2Tu0qvQls7H9iZYlmDoNRmOwnVanYc=
 env:
   global:
-  - secure: WZwHwifyIrOFWA06HU18+n5momE68IZaW5YEKzKgznVT8rU4wOYDS7QvWJShATGyqGGc4stsVFigCOo4fe1zCw0WQpo9qu1R5zlw2jatLuTWj/BOjhA6JVr133MN4EmueiPvZqKI5icBz3UNxA42Fxzo4ku1til+0jpwI6QlkoI=
-before_install:
-- openssl aes-256-cbc -K $encrypted_65553d4eaa33_key -iv $encrypted_65553d4eaa33_iv
-  -in deploy-keys.tar.enc -out deploy-keys.tar -d
-install:
-- tar xf deploy-keys.tar -C $HOME && chmod go-rwx -R $HOME/.m2 $HOME/.ssh
+  - secure: LQGMj2+dEYAHyf3gPricPDiWergllhXghPRMimQrlRka1LeqcUexErRu9/kyrJGx+QWVXyCGXAPmg8yrIc8zaQqTzEKuSEUHEBN/ilKIrFOs82CD/9CWaQ7mM4+Ee/p2JoDG5Zd82GIMeT2LuJ5aEy0cUez6n33m4AeZMzWdd4DgC8ocTFBDv4Iy31cjnTc3Ra41z77MXxRAfeP8XZP/qcudKoxAJIGP4nm3eehEpAqCbLjZxP1vD9Y5nFQ1drOcPjvRQ1bxm//h+HaWkIArUQ/yklYY9arOmrGraBI3yYcdZudH65QKk/ZQtvrlxwOaO80Oy1V9Fq4qt/M75l8F9NlUN0VjFMeheQA5Rq5hSAvFqcFCktMTCsH6zUZSi3K7ZHZfx/Yuk9txSZH4ODlzLr1PSNpuAhZVifRkiJ4AyBF9MSTeVlRwMd3oSL9s9VibuT05QT59/3FvuO9OzxvAJ8l1PBSySVRF9wQKZvyWdrNI6nu3VB0GxVFGCYeVw0RYtfWC0vyfJfbTCTuKU9ol3Seyds0/nyabZ3uI9CDN/ml3e4qS+I8XGwxQqWBd5XKXH+W4o+gfiLaglDPMQA3/aP/t+p9p6bP1cs/OtmR0q9LQRlTa+okToypwamxrvslE0gWyQ4RSv4ayYQgT0Nn2TO0v0xZrKQUMd4QYWtcBoJY=
