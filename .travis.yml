@@ -7,7 +7,8 @@ jdk:
 sudo: false
 cache:
   directories:
-  - "$HOME/.m2/repository"
+  - $HOME/.gradle/caches/
+  - $HOME/.gradle/wrapper/
   - "$HOME/.sonar/cache"
 addons:
   apt:
@@ -23,3 +24,5 @@ addons:
 env:
   global:
   - secure: LQGMj2+dEYAHyf3gPricPDiWergllhXghPRMimQrlRka1LeqcUexErRu9/kyrJGx+QWVXyCGXAPmg8yrIc8zaQqTzEKuSEUHEBN/ilKIrFOs82CD/9CWaQ7mM4+Ee/p2JoDG5Zd82GIMeT2LuJ5aEy0cUez6n33m4AeZMzWdd4DgC8ocTFBDv4Iy31cjnTc3Ra41z77MXxRAfeP8XZP/qcudKoxAJIGP4nm3eehEpAqCbLjZxP1vD9Y5nFQ1drOcPjvRQ1bxm//h+HaWkIArUQ/yklYY9arOmrGraBI3yYcdZudH65QKk/ZQtvrlxwOaO80Oy1V9Fq4qt/M75l8F9NlUN0VjFMeheQA5Rq5hSAvFqcFCktMTCsH6zUZSi3K7ZHZfx/Yuk9txSZH4ODlzLr1PSNpuAhZVifRkiJ4AyBF9MSTeVlRwMd3oSL9s9VibuT05QT59/3FvuO9OzxvAJ8l1PBSySVRF9wQKZvyWdrNI6nu3VB0GxVFGCYeVw0RYtfWC0vyfJfbTCTuKU9ol3Seyds0/nyabZ3uI9CDN/ml3e4qS+I8XGwxQqWBd5XKXH+W4o+gfiLaglDPMQA3/aP/t+p9p6bP1cs/OtmR0q9LQRlTa+okToypwamxrvslE0gWyQ4RSv4ayYQgT0Nn2TO0v0xZrKQUMd4QYWtcBoJY=
+script:
+- gradle sonarqube
